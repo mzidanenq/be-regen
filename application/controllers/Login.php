@@ -20,7 +20,25 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('login');
-        
+		$this->form_validation->set_rules('id', 'ID','required');
+		$this->form_validation->set_rules('pass', 'Password','required');
+
+		if($this->form_validation->run() == FALSE) {
+			$this->load->view('templates/header');
+			$this->load->view('login');  
+			$this->load->view('templates/footer');
+		} else {
+			$auth = $this->Model_admin->login();
+
+			if($auth == true) {
+				// nanti di bikin redirect dan session disini -zidane
+				echo "berhasil login";
+			} else {
+				//ntr dibikin validasi lagi disini -zidane
+				echo "id atau password salah";
+			}
+		}
+
+		      
 	}
 }
