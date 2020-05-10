@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Montserrat, Tahoma;
+}
+
+main {
+  margin-left: 5rem;
+}
+
+.navbar {
+  transition: width 200ms ease;
+  position: fixed;
+  background-color: #FFDD67;
+  height: 100vh;
+}
+.navbar:hover {
+  width: 16rem;
+}
+.navbar:hover .link-text {
+  display: inline;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 5rem;
+  color: #FF9293;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+.nav-link img {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #FFD131;
+  color: #000;
+}
+.nav-link:hover img {
+  transform: rotate(360deg);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.active {
+  filter: grayscale(0%) opacity(1);
+  color: #000;
+}
+
+.food-list {
+  background-color: #fff;
+  padding: 3rem 0rem;
+}
+.food-list h1 {
+  color: #FF9293;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.food-list .list-content {
+  margin: 2rem 20rem;
+}
+.food-list .list-content hr {
+  border-style: solid;
+}
+.food-list .list-content .list-item {
+  display: flex;
+  flex-direction: row;
+}
+.food-list .list-content .list-item .img-container {
+  margin: 1.2rem;
+}
+.food-list .list-content .list-item .img-container img {
+  width: 8rem;
+}
+.food-list .list-content .list-item .list-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1.2rem;
+}
+.food-list .list-content .list-item .list-details h4 {
+  font-size: 1.5rem;
+}
+.food-list .list-content .list-item .list-details h4 span {
+  color: #FFDD67;
+}
+.food-list .list-content .list-item .list-details p {
+  font-size: 1rem;
+  color: #494747;
+  margin-top: 0.5rem;
+}
+.food-list .action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.food-list .action img {
+  width: 3.5rem;
+  padding: 0.5rem 0rem;
+}
+.food-list .action img:active {
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=admin-view-list.css.map */

@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Montserrat, Tahoma;
+}
+
+main {
+   margin-left: 5rem;
+}
+
+$pink : #FF9293;
+$yellow: #FFDD67;
+$yellow-second: #FFD131;
+$choco: #95776E;
+
+.navbar{
+   transition: width 200ms ease;
+   position: fixed;
+   background-color: $yellow;
+   height: 100vh;
+   &:hover{
+       width: 16rem;
+       .link-text{
+           display: inline;
+       }
+   }
+}
+.navbar-nav{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100%;
+}
+
+.nav-item {
+   width: 100%;
+}
+ 
+.nav-item:last-child {
+   margin-top: auto;
+}
+ 
+.nav-link {
+   display: flex;
+   align-items: center;
+   font-weight: 600;
+   height: 5rem;
+   color: $pink;
+   text-decoration: none;
+   filter: grayscale(100%) opacity(0.7);
+   transition: 600ms;
+   img{
+       width: 2rem;
+       min-width: 2rem;
+       margin: 0 1.5rem;
+       transform: rotate(0deg);
+       transition: 600ms;
+   }
+}
+
+.nav-link:hover {
+   filter: grayscale(0%) opacity(1);
+   background: $yellow-second;
+   color: #000;
+   img{
+       transform: rotate(360deg);
+   }
+ }
+
+.link-text {
+   display: none;
+   margin-left: 1rem;
+}
+
+.active{
+   filter: grayscale(0%) opacity(1);
+   color: #000;
+}
+@mixin heading(){
+    color: $pink;
+    font-weight: 700;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.food-list{
+    background-color: #fff;
+    padding: 3rem 0rem;
+    h1{
+        @include heading();
+    }
+    .list-content{
+        margin: 2rem 20rem;
+        hr{
+            border-style: solid;
+        }
+        .list-item{
+            display: flex;
+            flex-direction: row;
+            .img-container{
+                margin: 1.2rem;
+                img{
+                    width: 8rem;
+                }
+            }
+            .list-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin: 1.2rem;
+                h4{
+                    font-size: 1.5rem;
+                    span{
+                        color: $yellow;
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    color: #494747;
+                    margin-top: 0.5rem;
+                }
+            }
+
+        }
+    }
+    .action{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        img{
+            width: 3.5rem;
+            padding: 0.5rem 0rem;
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+}

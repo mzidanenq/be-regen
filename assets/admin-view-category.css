@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Montserrat, Tahoma;
+}
+
+main {
+  margin-left: 5rem;
+}
+
+.navbar {
+  transition: width 200ms ease;
+  position: fixed;
+  background-color: #FFDD67;
+  height: 100vh;
+}
+.navbar:hover {
+  width: 16rem;
+}
+.navbar:hover .link-text {
+  display: inline;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 5rem;
+  color: #FF9293;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+.nav-link img {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #FFD131;
+  color: #000;
+}
+.nav-link:hover img {
+  transform: rotate(360deg);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.active {
+  filter: grayscale(0%) opacity(1);
+  color: #000;
+}
+
+.food-category {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 10rem;
+  padding-top: 1rem;
+}
+.food-category h1 {
+  color: #FF9293;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.food-category .category-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.food-category .category-content .category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.food-category .category-content .category-item .icon-container {
+  width: 12rem;
+  height: 11rem;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+}
+.food-category .category-content .category-item .icon-container img {
+  display: block;
+  width: 80%;
+}
+.food-category .category-content .category-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #414040;
+}
+.food-category .action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.food-category .action .edit {
+  border: 1px solid #fc983a;
+  background-color: #fc983a;
+}
+.food-category .action .delete {
+  border: 1px solid #d83636;
+  background-color: #d83636;
+}
+.food-category .action button {
+  border-radius: 20px;
+  margin: 0.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+}
+.food-category .action button:active {
+  transform: scale(0.9);
+}
+.food-category .action button:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=admin-view-category.css.map */
